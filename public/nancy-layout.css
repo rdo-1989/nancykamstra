@@ -1,0 +1,33 @@
+/* Shared layout for the overview and role pages. */
+:root { --ink:#71324b; --paper:#fffaf8; --wash:#f5e5e7; --edge:#ddc8ce; }
+body.sage { --ink:#38534b; --paper:#f7faf6; --wash:#e2ebe2; --edge:#bdcec1; }
+body.ink { --ink:#333446; --paper:#f9f9fc; --wash:#e7e7ef; --edge:#cacadc; }
+body.ochre { --ink:#825530; --paper:#fdf9f3; --wash:#f2e5d2; --edge:#dac7af; }
+.role { margin:0;background:var(--paper);color:var(--ink);font:1.0625rem/1.7 Arial,sans-serif; }
+.role * { box-sizing:border-box; }
+.role a { color:inherit;text-underline-offset:4px; }
+.role :focus-visible { outline:3px solid currentColor;outline-offset:4px; }
+.role .skip {position:absolute;left:-200vw}.role .skip:focus{left:1rem;top:1rem;background:white}
+.role h1,.role h2,.overview-intro {font-family:Georgia,serif;font-weight:400;line-height:1.07;letter-spacing:-.035em;text-wrap:balance;}
+.role h1 {font-size:clamp(2.8rem,6vw,6rem);margin:.2em 0;}
+.role h2,.shared-contact h2 {font:normal clamp(2rem,4.4vw,4rem)/1.08 Georgia,serif;margin:0;text-wrap:balance;}
+.frame {width:min(90%,1296px);margin-inline:auto;}
+.role-header,.shared-foot {display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;}
+.role-header {padding:1.4rem 0;border-bottom:1px solid var(--edge);}
+.wordmark {display:inline-block;width:clamp(138px,17vw,185px);aspect-ratio:335/90;background:var(--ink);mask:url('/images/nancy-kamstra-logo.svg') center/contain no-repeat;}
+.role .btn,.shared-contact .btn {display:inline-flex;align-items:center;min-height:46px;padding:.6rem 1.2rem;border-radius:3px;text-decoration:none;background:var(--ink);color:white;}
+.role .back {display:inline-block;margin-top:1rem;}
+.role-hero,.story,.shared-contact .frame {display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,7vw,7rem);align-items:center;padding-block:clamp(3rem,7vw,6rem);}
+.role-hero p,.story p,.shared-contact p {max-width:55ch;margin:0;}
+.role-hero p {font-size:1.2rem;}
+.role .label,.shared-contact .label {text-transform:uppercase;letter-spacing:.13em;font: bold .8rem/1.5 Arial,sans-serif;margin:0 0 1rem;}
+.stage {display:block;width:min(90%,1296px);height:auto;margin:0 auto clamp(2rem,6vw,5rem);}
+.story-band {background:var(--wash);}
+.shared-contact {background:var(--ink);color:var(--paper);}
+.shared-contact .btn {margin-top:1.5rem;background:var(--wash);color:var(--ink);}
+.contact-links {border-top:1px solid var(--edge);padding-top:1.4rem;display:grid;justify-items:start;gap:.6rem;}
+.contact-links a {color:inherit;overflow-wrap:anywhere;}
+.shared-foot {margin:0 auto;padding:2rem 0;color:var(--ink);border:0;}
+.overview-intro {font-size:clamp(1.9rem,4vw,3.8rem);max-width:27ch;margin:clamp(2.2rem,5vw,4rem) 0;}
+.overview .shared-contact {margin-top:clamp(3rem,6vw,5rem);}
+@media(max-width:700px){.role-hero,.story,.shared-contact .frame{grid-template-columns:1fr;gap:1.4rem}.shared-foot{align-items:flex-start}.contact-links{margin-top:.5rem}.role-header{gap:.5rem}.role-header .btn{padding-inline:.8rem}}
