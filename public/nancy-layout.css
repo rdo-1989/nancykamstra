@@ -31,3 +31,17 @@ body.ochre { --ink:#825530; --paper:#fdf9f3; --wash:#f2e5d2; --edge:#dac7af; }
 .overview-intro {font-size:clamp(1.9rem,4vw,3.8rem);max-width:27ch;margin:clamp(2.2rem,5vw,4rem) 0;}
 .overview .shared-contact {margin-top:clamp(3rem,6vw,5rem);}
 @media(max-width:700px){.role-hero,.story,.shared-contact .frame{grid-template-columns:1fr;gap:1.4rem}.shared-foot{align-items:flex-start}.contact-links{margin-top:.5rem}.role-header{gap:.5rem}.role-header .btn{padding-inline:.8rem}}
+
+/* Warm taupe for the overview; each role tile carries its own accent. */
+body.overview {
+  --ink: #514b43;
+  --paper: #f8f6f1;
+  --wash: #e8e3d9;
+  --edge: #cfc8bb;
+  background: var(--paper);
+  color: var(--ink);
+}
+.overview .bar { border-color: var(--edge); }
+.overview .bar .meet { background: var(--ink); color: var(--paper); }
+.overview .bar .meet:hover { background: #403b35; }
+.overview .bar .wordmark { width: clamp(145px, 22vw, 185px); }
