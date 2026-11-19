@@ -1,3 +1,4 @@
+@import url('/nancy-header.css');
 /* Shared layout for the overview and role pages. */
 :root { --ink:#71324b; --paper:#fffaf8; --wash:#f5e5e7; --edge:#ddc8ce; }
 body.sage { --ink:#38534b; --paper:#f7faf6; --wash:#e2ebe2; --edge:#bdcec1; }
@@ -50,4 +51,4 @@ body.overview {
 .overview .shared-contact { background: var(--wash); color: var(--ink); }
 .overview .shared-contact .btn { background: var(--paper); }
 .overview .bar .meet:hover, .overview .shared-contact .btn:hover { background: #e2d8cb; }
-.overview .bar .wordmark { width: clamp(145px, 22vw, 185px); }
+

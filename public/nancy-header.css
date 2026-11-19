@@ -1,0 +1,23 @@
+/* All headers share one logo origin, independent of the navigation and subtitle. */
+html { scrollbar-gutter: stable; }
+header.bar, header.frame.role-header, header.header {
+  --logo-width: clamp(145px, 22vw, 185px);
+  box-sizing: border-box;
+  width: min(90%, 1120px);
+  max-width: 1120px;
+  margin-inline: auto;
+  padding: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: .5rem 1rem;
+}
+.overview header.bar { width: 100%; }
+header.bar > a.wordmark, header.role-header > a.wordmark, header.header > a.brand {
+  display: block;
+  flex: 0 0 var(--logo-width);
+  width: var(--logo-width);
+  margin: 0;
+}
+header.header > a.brand img { display: block; width: 100%; height: auto; aspect-ratio: 335 / 90; }
