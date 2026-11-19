@@ -32,16 +32,22 @@ body.ochre { --ink:#825530; --paper:#fdf9f3; --wash:#f2e5d2; --edge:#dac7af; }
 .overview .shared-contact {margin-top:clamp(3rem,6vw,5rem);}
 @media(max-width:700px){.role-hero,.story,.shared-contact .frame{grid-template-columns:1fr;gap:1.4rem}.shared-foot{align-items:flex-start}.contact-links{margin-top:.5rem}.role-header{gap:.5rem}.role-header .btn{padding-inline:.8rem}}
 
-/* Warm taupe for the overview; each role tile carries its own accent. */
+/* Light linen palette for the overview. */
 body.overview {
-  --ink: #514b43;
-  --paper: #f8f6f1;
-  --wash: #e8e3d9;
-  --edge: #cfc8bb;
+  --ink: #62594f;
+  --paper: #fcfaf7;
+  --wash: #eee8df;
+  --edge: #d6ccbd;
   background: var(--paper);
   color: var(--ink);
 }
 .overview .bar { border-color: var(--edge); }
-.overview .bar .meet { background: var(--ink); color: var(--paper); }
-.overview .bar .meet:hover { background: #403b35; }
+.overview .bar .meet, .overview .shared-contact .btn {
+  background: var(--wash);
+  color: var(--ink);
+  border: 1px solid var(--edge);
+}
+.overview .shared-contact { background: var(--wash); color: var(--ink); }
+.overview .shared-contact .btn { background: var(--paper); }
+.overview .bar .meet:hover, .overview .shared-contact .btn:hover { background: #e2d8cb; }
 .overview .bar .wordmark { width: clamp(145px, 22vw, 185px); }
